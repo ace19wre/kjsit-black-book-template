@@ -34,7 +34,7 @@
 
 // --- College (printed at the bottom of the covers) ---------------------------
 #let College-Name = "K.J. Somaiya Institute of Technology"
-#let College-Address = "Sion Ayurvihar Complex, E. E. Highway, Everard Nagar, Sion East, Mumbai-400022"
+#let College-Address = "Sion Ayurvihar Complex, Eastern Express Highway, Everard Nagar, Sion East, Mumbai-400022"
 #let Year = "2026"
 
 // --- Chapters ----------------------------------------------------------------
