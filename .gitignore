@@ -10,3 +10,6 @@ template/fonts/*.TTF
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Editor settings (JetBrains IDEs)
+.idea/

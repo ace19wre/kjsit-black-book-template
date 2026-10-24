@@ -163,7 +163,7 @@ Delete `../bb-check` when you are done.
 | Covers                                       | logos; title 22 pt; students one per line in 15 pt bold; digital cover black with gold lettering                                                                                   | `template/covers/` (shared layout in `title-page.typ`)                            |
 | Certificate                                  | students separated by commas and "and"; guides side by side; HOD and Principal signatures                                                                                          | `template/front-matter/certificate.typ`                                           |
 | Spine                                        | `Title` left-aligned (= top of the spine), auto-shrunk below 11 pt only if it wouldn't fit on one line; `Stream-Short academic-year/Group-N` right-aligned (= bottom of the spine) | `PRINT-SPINE.typ`; the year comes from the compile date (new year starts in July) |
-| PDF properties (digital copy)                | title = `Title`; author = first student in `dataset`; date = when the PDF is compiled                                                                                              | `DIGITAL.typ`, `set document(...)`                                                |
+| PDF properties (digital copy)                | title = `Title`; authors = all students in `dataset`, comma-separated; date = when the PDF is compiled                                                                             | `DIGITAL.typ`, `set document(...)`                                                |
 
 ### Deliberate decisions: don't change unless the user asks
 
