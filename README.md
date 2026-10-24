@@ -211,11 +211,11 @@ A few department-specific things are worth checking:
 
 College rule: with more than 2 authors, list the first author followed by "et al."
 
-| Authors | Typst's built-in IEEE style | This template |
-|---|---|---|
-| 4 | T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein | T. H. Cormen *et al.* |
-| 3 | Y. LeCun, Y. Bengio, and G. Hinton | Y. LeCun *et al.* |
-| 2 | S. Russell and P. Norvig | S. Russell and P. Norvig |
+| Authors | Typst's built-in IEEE style                               | This template            |
+|---------|-----------------------------------------------------------|--------------------------|
+| 4       | T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein | T. H. Cormen *et al.*    |
+| 3       | Y. LeCun, Y. Bengio, and G. Hinton                        | Y. LeCun *et al.*        |
+| 2       | S. Russell and P. Norvig                                  | S. Russell and P. Norvig |
 
 - **Why a separate style file:** Typst's built-in `ieee` style lists up to 6 authors and only switches to "et al." at 7. It is stored inside the Typst program and can't be edited, so the template ships its own copy, `template/ieee.csl`.
 - **Where it came from:** the official `ieee.csl` from the Citation Style Language project (https://github.com/citation-style-language/styles), the same style collection Zotero and Mendeley use. Before editing, it was checked against Typst's built-in `ieee` style: both rendered the Bibliography **pixel-identical**.
