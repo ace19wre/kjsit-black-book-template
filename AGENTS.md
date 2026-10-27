@@ -177,6 +177,8 @@ Delete `../bb-check` when you are done.
   The Abstract and Acknowledgement text is justified with Word "1.5 lines" spacing; the
   Declaration keeps its own `leading: 22.5pt`.
 - Justified text is hyphenated (Typst's default); the user chose to keep it.
+- The sample Appendix A2 in `content/appendix.typ` starts directly with a table, on purpose
+  (the user chose not to add a section). Appendices may do this; the fallback gap handles it.
 - Contents and lists keep ruled table borders.
 - The inner title page lists student names only (no roll numbers).
 
@@ -185,9 +187,19 @@ Delete `../bb-check` when you are done.
 **Fill in details:** edit `config.typ` only. `dataset` rows are `(Name, Roll No., Division, Exam Seat No.)`.
 Set `Supervisor-2` to `""` when there is only one guide.
 
-**Add a chapter:** create `content/chapters/05-name.typ`, starting with `= Title` and then a
-`== Section` (the template puts no space between a chapter title and body text that follows it
-directly). Add `"/content/chapters/05-name.typ"` to `chapters` in `config.typ`, in reading order.
+**Add a chapter:** create `content/chapters/05-name.typ`, starting with `= Title` and then
+immediately a `== Section` (for example `== Introduction`). Add `"/content/chapters/05-name.typ"`
+to `chapters` in `config.typ`, in reading order.
+
+> ⚠️ **Never put text, a figure or a table directly under a chapter title.** Every chapter must
+> begin with a `== Section`, as in the coordinator's sample ("1.1 Introduction"). If a student's
+> chapter starts with a paragraph, move it under a new first section such as `== Introduction`
+> and tell the student why. Don't add `#v(...)` spacing to fix the gap by hand.
+>
+> Safety net: if it happens anyway, the level-1 heading rule in `template/body.typ` detects that
+> no `== Section` follows the title and adds the gap a section would have had (38 pt from the
+> title, the same as a normal chapter), so the page still looks right. The numbering still
+> skips the "N.1" introduction, which is why the rule above matters.
 
 **Replace the tutorial:** remove the four sample chapters from `chapters` in `config.typ` (and
 delete their files if the user agrees). Also replace the sample entries in `content/references/*.bib`
@@ -242,6 +254,10 @@ PSO table at the end of `content/co-po-mapping.typ`.
   as `@fig:x`, on a table `@tbl:x`, on code `@lst:x`, on an equation `@eqt:x`. A plain `@x` fails
   with "label does not exist". Headings are cited without a prefix, and only print the number,
   so write "Section @x".
+- **Chapters must start with a `== Section`.** Text, figures or tables placed directly under
+  `= Title` break the college's numbering scheme (1.1, 1.2 …). The template's fallback gap
+  keeps the spacing right, but see the warning under "Add a chapter". Keep the fallback in the
+  level-1 heading rule: a chapter that starts with a section must stay pixel-identical.
 - **Labels must be unique across the whole book.** While the tutorial chapters are still listed in
   `config.typ`, these labels are taken: `logo`, `models`, `pipeline`, `accuracy-code`, `sections`,
   `sigmoid`. A duplicate fails with "label `<…>` occurs multiple times in the document".

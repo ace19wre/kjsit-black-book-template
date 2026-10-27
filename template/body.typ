@@ -57,6 +57,18 @@
       align(center)[#text(size: 14pt)[#label #counter(heading).display()]],
       align(center)[#text(size: 14pt)[#upper[#it.body]]]
     )
+    // Chapters should start with a `== Section` (see AGENTS.md). If something else comes
+    // first (a paragraph, figure, table...), add the gap a section would have had.
+    context {
+      let title-end = here().position()
+      let nxt = query(selector(heading).after(here())).at(0, default: none)
+      let section-first = (
+        nxt != none and nxt.level == 2
+          and nxt.location().page() == title-end.page
+          and nxt.location().position().y - title-end.y < 1pt
+      )
+      if not section-first { v(29.6pt) }  // = normal title-to-section gap (38 pt) minus the title-to-text gap (8.4 pt)
+    }
   } else {
     align(center)[#text(size: 14pt)[#upper[#it.body]]]
     v(2em)
