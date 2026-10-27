@@ -13,24 +13,24 @@
 // --- Students ----------------------------------------------------------------
 // One line per student: (Name, Roll Number, Division, Exam Seat Number)
 #let dataset = (
-  ("Riddhesh Chaudhary", 15, "L.Y. - A", 123456),
-  ("Arpit Balmiki", 6, "L.Y. - A", 123456),
-  ("Chirayu Vyas", 63, "L.Y. - A", 123456),
+  ("Student Name 1", 1, "L.Y. - A", 123456),
+  ("Student Name 2", 2, "L.Y. - A", 123456),
+  ("Student Name 3", 3, "L.Y. - A", 123456),
 )
 
 // --- Guides ------------------------------------------------------------------
-#let Supervisor-1 = "Dr. Alice Smith"
+#let Supervisor-1 = "Dr. Guide Name"
 #let Supervisor-1-Designation = "Dean Academics"
 #let Supervisor-1-Dept = "AI&DS"
 
-#let Supervisor-2 = "Dr. Else"  // Set to "" or none if not assigned
+#let Supervisor-2 = "Dr. Co-guide Name"  // Set to "" or none if not assigned
 #let Supervisor-2-Designation = "Water Manager"
 #let Supervisor-2-Dept = "Dept. of Artificial Sciences"
 
 // --- Signatories -------------------------------------------------------------
-#let HOD-name = "Dr. Milind Nemade"
+#let HOD-name = "Dr. HOD Name"
 
-#let Principal-name = "Dr. Vivek Sunnapawar"
+#let Principal-name = "Dr. Principal Name"
 
 // --- College (printed at the bottom of the covers) ---------------------------
 #let College-Name = "K.J. Somaiya Institute of Technology"
